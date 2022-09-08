@@ -1,8 +1,10 @@
-﻿using Microsoft.AspNetCore.SignalR;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using SignalRServerExample.Interfaces;
 
 namespace SignalRServerExample.Hubs
 {
+    [Route("/myhub")]
     public class MyHub : Hub<IMessageClient>
     {
         private static readonly List<string> clients = new List<string>();

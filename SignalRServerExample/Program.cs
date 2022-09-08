@@ -1,5 +1,5 @@
 using SignalRServerExample.Business;
-using SignalRServerExample.Hubs;
+using SignalRServerExample.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +28,7 @@ app.UseRouting();
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapHub<MyHub>("/myhub");
+    endpoints.MapHubs();
     endpoints.MapControllers();
 });
 
