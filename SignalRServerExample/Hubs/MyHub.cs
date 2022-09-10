@@ -7,7 +7,7 @@ namespace SignalRServerExample.Hubs
     [Route("/myhub")]
     public class MyHub : Hub<IMessageClient>
     {
-        private static readonly List<string> clients = new List<string>();
+        private static readonly List<string> clients = new();
 
         //public async Task SendMessageAsync(string message)
         //{
